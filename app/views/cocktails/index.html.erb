@@ -1,0 +1,10 @@
+<h1> Awesome cocktails</h1>
+<p>La vie sans cocktails est une vie sans soleil !</p>
+<%= link_to "Add a new cocktail", new_cocktail_path%>
+
+<div class="container">
+    <% @cocktails.each do |cocktail| %>
+      <h2><%= cocktail.name %></h2>
+      <%= link_to "Details", cocktail_path(cocktail)%>
+    <% end %>
+</div>
